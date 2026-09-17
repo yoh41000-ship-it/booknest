@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выдача книги — BookNest</title>
+</head>
+<body>
+    <
+    <header>
+        <a href="index.html">BookNest</a>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="loan.html" aria-current="page">Выдача</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         <h1>Форма выдачи книги</h1>
+
+         <form action="/loan" method="post">
+            <fieldset>
+                <legend>Данные читателя</legend>
+                <p>
+                    <label for="reader-name">Фио</label>
+                    <input type="text" id="reader-name" name="reader-name" required maxlength="100">
+                </p>
+                <p>
+                    <label for="reader-email">Email</label>
+                    <input type="email" id="reader-email" name="reader-email" required maxlength="100">
+                </p>
+                <p>
+                    <label for="reader-card">Номер билета</label>
+                    <input type="text" id="reader-card" name="card_number"
+                           required pattern="[0-9]{6}" title="Шесть цифр">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Данные о выдаче</legend>
+                <p>
+                    <label for="book-id">ID книги</label>
+                    <input type="number" id="book-id" name="book_id" required min="1" max="99999">
+                </p>
+                <p>
+                    <label for="loan-date">Дата выдачи</label>
+                    <input type="date" id="loan-date" name="loan_date" required>
+                </p>
+                 <p>
+                    <label for="loan-period">Срок (дней)</label>
+                    <select id="loan-period" name="period" required>
+                        <option value="">— выберите —</option>
+                        <option value="7">7</option>
+                        <option value="14">14</option>
+                        <option value="30">30</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Дополнительно</legend>
+                <p>
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" maxlength="500" rows="4"></textarea>
+                </p>
+            </fieldset>
+            <button type="submit">Оформить выдачу</button>
+         </form>
+    </main>
+    <footer>
+        <p>© 2025 BookNest</p>
+    </footer>
+</body>
+</html>
