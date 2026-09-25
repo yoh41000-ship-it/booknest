@@ -3,19 +3,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BookNest — каталог книг</title>
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
 <body>
-<header>
+<header class="site-header">
         <a href="index.html">BookNest</a>
-        <nav aria-label="Основная навигация">
+        <nav class="site-nav" aria-label="Основная навигация">
             <ul>
                 <li><a href="index.html">Каталог</a></li>
                 <li><a href="loan.html">Выдача</a></li>
             </ul>
         </nav>
 </header>
-<main>
+<main class="container catalog-layout">
         <h1>Каталог книг</h1>
-        <section aria-labelledby="filters-heading">
+        <section class="filters" aria-labelledby="filters-heading">
         <h2 id="filters-heading">Фильтры</h2>
         <form action="/search" method="get">
             <p>
@@ -47,10 +51,11 @@
 
         </section>
 
-        <section aria-labelledby="results-heading">
-            <h2 id="results-heading">Найдено 6 книг</h2>
+         <h2 id="results-heading">Найдено 6 книг</h2>
 
-            <article>
+        <section class="catalog-grid" aria-labelledby="results-heading">
+
+            <article class="book-card">
                 <h3><a href="book.html">Мастер и Маргарита</a></h3>
                 <figure>
                     <img src="images/cover-1.jpg"
@@ -60,8 +65,9 @@
                 </figure>
                 <p>Автор: Михаил Булгаков</p>
                 <p>Год: <time datetime="1967">1967</time></p>
+                <a href="loan.html" class="btn">Взять книгу</a>
             </article>
-            <article>
+            <article class="book-card">
     <h3><a href="book.html">Преступление и наказание</a></h3>
     <figure>
         <img src="images/cover-2.jpg"
@@ -71,8 +77,9 @@
     </figure>
     <p>Автор: Фёдор Достоевский</p>
     <p>Год: <time datetime="1866">1866</time></p>
+     <a href="loan.html" class="btn">Взять книгу</a>
             </article>
-            <article>
+            <article  class="book-card">
     <h3><a href="book.html">Война и мир</a></h3>
     <figure>
         <img src="images/cover-3.jpg" alt="Обложка книги «Война и мир»" width="150" height="220">
@@ -80,8 +87,9 @@
     </figure>
     <p>Автор: Лев Толстой</p>
     <p>Год: <time datetime="1869">1869</time></p>
+     <a href="loan.html" class="btn">Взять книгу</a>
             </article>
-            <article>
+            <article class="book-card">
     <h3><a href="book.html">1984</a></h3>
     <figure>
         <img src="images/cover-4.jpg" alt="Обложка книги «1984»" width="150" height="220">
@@ -89,8 +97,9 @@
     </figure>
     <p>Автор: Джордж Оруэлл</p>
     <p>Год: <time datetime="1949">1949</time></p>
+     <a href="loan.html" class="btn">Взять книгу</a>
             </article>
-            <article>
+            <article class="book-card">
     <h3><a href="book.html">Гарри Поттер и философский камень</a></h3>
     <figure>
         <img src="images/cover-5.jpg" alt="Обложка книги «Гарри Поттер и философский камень»" width="150" height="220">
@@ -98,8 +107,9 @@
     </figure>
     <p>Автор: Джоан Роулинг</p>
     <p>Год: <time datetime="1997">1997</time></p>
+      <a href="loan.html" class="btn">Взять книгу</a>
             </article>  
-            <article>
+            <article class="book-card">
     <h3><a href="book.html">Три товарища</a></h3>
     <figure>
         <img src="images/cover-6.jpg" alt="Обложка книги «Три товарища»" width="150" height="220">
@@ -107,10 +117,11 @@
     </figure>
     <p>Автор: Эрих Мария Ремарк</p>
     <p>Год: <time datetime="1936">1936</time></p>
+    <a href="loan.html" class="btn">Взять книгу</a>
             </article>
         </section>
 </main> 
-<footer>
+<footer class="site-footer">
     <p>© 2026 BookNest</p>
 </footer>
 </body>
