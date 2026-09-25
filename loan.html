@@ -10,67 +10,71 @@
     <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
-    <
-    <header>
+    <header class="site-header">
         <a href="index.html">BookNest</a>
-        <nav aria-label="Основная навигация">
+        <nav class="site-nav" aria-label="Основная навигация">
             <ul>
                 <li><a href="index.html">Каталог</a></li>
                 <li><a href="loan.html" aria-current="page">Выдача</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-         <h1>Форма выдачи книги</h1>
 
-         <form action="/loan" method="post">
-            <fieldset>
+    <main class="container">
+        <h1>Форма выдачи книги</h1>
+
+        <form class="loan-form" action="/loan" method="post">
+            <fieldset class="fieldset">
                 <legend>Данные читателя</legend>
-                <p>
-                    <label for="reader-name">Фио</label>
-                    <input type="text" id="reader-name" name="reader-name" required maxlength="100">
+                <p class="form-field">
+                    <label for="reader-name">ФИО</label>
+                    <input type="text" id="reader-name" name="reader_name" required maxlength="100">
                 </p>
-                <p>
+                <p class="form-field">
                     <label for="reader-email">Email</label>
-                    <input type="email" id="reader-email" name="reader-email" required maxlength="100">
+                    <input type="email" id="reader-email" name="reader_email" required>
                 </p>
-                <p>
-                    <label for="reader-card">Номер билета</label>
+                <p class="form-field">
+                    <label for="reader-card">Номер читательского билета</label>
                     <input type="text" id="reader-card" name="card_number"
                            required pattern="[0-9]{6}" title="Шесть цифр">
                 </p>
             </fieldset>
-            <fieldset>
+
+            <fieldset class="fieldset">
                 <legend>Данные о выдаче</legend>
-                <p>
+                <p class="form-field">
                     <label for="book-id">ID книги</label>
                     <input type="number" id="book-id" name="book_id" required min="1" max="99999">
                 </p>
-                <p>
+                <p class="form-field">
                     <label for="loan-date">Дата выдачи</label>
                     <input type="date" id="loan-date" name="loan_date" required>
                 </p>
-                 <p>
-                    <label for="loan-period">Срок (дней)</label>
+                <p class="form-field">
+                    <label for="loan-period">Срок выдачи</label>
                     <select id="loan-period" name="period" required>
                         <option value="">— выберите —</option>
-                        <option value="7">7</option>
-                        <option value="14">14</option>
-                        <option value="30">30</option>
+                        <option value="7">7 дней</option>
+                        <option value="14">14 дней</option>
+                        <option value="30">30 дней</option>
                     </select>
                 </p>
             </fieldset>
-            <fieldset>
+
+            <fieldset class="fieldset">
                 <legend>Дополнительно</legend>
-                <p>
+                <p class="form-field">
                     <label for="comment">Комментарий</label>
                     <textarea id="comment" name="comment" maxlength="500" rows="4"></textarea>
                 </p>
             </fieldset>
-            <button type="submit">Оформить выдачу</button>
-         </form>
+
+            <button type="submit" class="btn">Оформить выдачу</button>
+        </form>
     </main>
-    <footer>
+
+    <footer class="site-footer">
         <p>© 2025 BookNest</p>
     </footer>
 </body>
