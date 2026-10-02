@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="styles/tokens.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest — каталог книг</title>
@@ -12,15 +11,6 @@
 </head>
 <body>
     <header class="site-header">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BookNest — каталог книг</title>
-<link rel="stylesheet" href="styles/tokens.css">
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/layout.css">
-<link rel="stylesheet" href="styles/components.css">
-<body>
-<header class="site-header">
         <a href="index.html">BookNest</a>
         <nav class="site-nav" aria-label="Основная навигация">
             <ul>
@@ -28,43 +18,10 @@
                 <li><a href="loan.html">Выдача</a></li>
             </ul>
         </nav>
-
         <a href="#wishlist" class="wishlist-link">
             Мой список (<span data-role="wishlist-count">0</span>)
         </a>
     </header>
-</header>
-<main class="container catalog-layout">
-        <h1>Каталог книг</h1>
-        <section class="filters" aria-labelledby="filters-heading">
-        <h2 id="filters-heading">Фильтры</h2>
-        <form action="/search" method="get">
-            <p>
-                <label for="search">Поиск</label>
-                <input type="search" id="search" name="q" maxlength="100">
-            </p>
-            <p>
-                <label for="genre">Жанр</label>
-                <select id="genre" name="genre">
-                    <option value="">Все жанры</option>
-                    <option value="fantasy">Фантастика</option>
-                    <option value="detective">Детектив</option>
-                    <option value="classic">Классика</option>
-                </select>
-            </p>
-            <p>
-                <label for="sort">Сортировка</label>
-                <select name="sort" id="sort">
-                    <option value="title">По названию</option>
-                    <option value="year">По году</option>
-                </select>
-            </p>
-            <p>
-                <input type="checkbox" id="available" name="available">
-                <label for="available">Только доступные</label>
-            </p>
-            <button type="submit">Применить</button>
-        </form>
 
     <main class="container catalog-layout">
         <h1>Каталог книг</h1>
@@ -115,78 +72,5 @@
     </footer>
 
     <script type="module" src="js/main.js"></script>
-         <h2 id="results-heading">Найдено 6 книг</h2>
-
-        <section class="catalog-grid" aria-labelledby="results-heading">
-
-            <article class="book-card">
-                <h3><a href="book.html">Мастер и Маргарита</a></h3>
-                <figure>
-                    <img src="images/cover-1.jpg"
-                    alt="Обложка книги «Мастер и Маргарита»"
-                    width="150" height="220">
-                    <figcaption>Издание 1967 года</figcaption>
-                </figure>
-                <p>Автор: Михаил Булгаков</p>
-                <p>Год: <time datetime="1967">1967</time></p>
-                <a href="loan.html" class="btn">Взять книгу</a>
-            </article>
-            <article class="book-card">
-    <h3><a href="book.html">Преступление и наказание</a></h3>
-    <figure>
-        <img src="images/cover-2.jpg"
-             alt="Обложка книги «Преступление и наказание»"
-             width="150" height="220">
-        <figcaption>Издание 1866 года</figcaption>
-    </figure>
-    <p>Автор: Фёдор Достоевский</p>
-    <p>Год: <time datetime="1866">1866</time></p>
-     <a href="loan.html" class="btn">Взять книгу</a>
-            </article>
-            <article  class="book-card">
-    <h3><a href="book.html">Война и мир</a></h3>
-    <figure>
-        <img src="images/cover-3.jpg" alt="Обложка книги «Война и мир»" width="150" height="220">
-        <figcaption>Издание 1869 года</figcaption>
-    </figure>
-    <p>Автор: Лев Толстой</p>
-    <p>Год: <time datetime="1869">1869</time></p>
-     <a href="loan.html" class="btn">Взять книгу</a>
-            </article>
-            <article class="book-card">
-    <h3><a href="book.html">1984</a></h3>
-    <figure>
-        <img src="images/cover-4.jpg" alt="Обложка книги «1984»" width="150" height="220">
-        <figcaption>Издание 1949 года</figcaption>
-    </figure>
-    <p>Автор: Джордж Оруэлл</p>
-    <p>Год: <time datetime="1949">1949</time></p>
-     <a href="loan.html" class="btn">Взять книгу</a>
-            </article>
-            <article class="book-card">
-    <h3><a href="book.html">Гарри Поттер и философский камень</a></h3>
-    <figure>
-        <img src="images/cover-5.jpg" alt="Обложка книги «Гарри Поттер и философский камень»" width="150" height="220">
-        <figcaption>Издание 1997 года</figcaption>
-    </figure>
-    <p>Автор: Джоан Роулинг</p>
-    <p>Год: <time datetime="1997">1997</time></p>
-      <a href="loan.html" class="btn">Взять книгу</a>
-            </article>  
-            <article class="book-card">
-    <h3><a href="book.html">Три товарища</a></h3>
-    <figure>
-        <img src="images/cover-6.jpg" alt="Обложка книги «Три товарища»" width="150" height="220">
-        <figcaption>Издание 1936 года</figcaption>
-    </figure>
-    <p>Автор: Эрих Мария Ремарк</p>
-    <p>Год: <time datetime="1936">1936</time></p>
-    <a href="loan.html" class="btn">Взять книгу</a>
-            </article>
-        </section>
-</main> 
-<footer class="site-footer">
-    <p>© 2026 BookNest</p>
-</footer>
 </body>
 </html>
