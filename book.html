@@ -1,87 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мастер и Маргарита — BookNest</title>
+    <title>Книга — BookNest</title>
     <link rel="stylesheet" href="styles/tokens.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/components.css">
+</head>
 <body>
-  <header class="site-header">
-    <a href="index.html">BookNest</a>
-    <nav aria-label="Основная навигация">
-        <ul>
-        <li><a href="index.html">Каталог</a></li>
-        <li><a href="loan.html">Выдача</a></li>
-        </ul>
-    </nav>
-  </header>
-  <main class="container book-layout">
-    <nav aria-label="Хлебные крошки">
-        <ol>
-            <li><a href="index.html">Каталог</a></li>
-            <li><a href="index.html">Классика</a></li>
-            <li aria-current="page"> «Мастер и Маргарита»</li>
-        </ol>
-    </nav>
-    <article class="book-detail">
-    <h1>Мастер и Маргарита</h1>
-
-            <figure>
-                <img src="images/cover-1.jpg"
-                     alt="Обложка романа «Мастер и Маргарита» Михаила Булгакова"
-                     width="300" height="440">
-                <figcaption>Издание 1967 года</figcaption>
-            </figure>
-   <section class="book-section" aria-labelledby="chars-heading">
-    <dl>
-        <dt>Автор</dt><dd>Михаил Булгаков</dd>
-        <dt>Год издания</dt><dd><time datetime="1967">1967</time></dd>
-        <dt>Жанр</dt><dd>Классика</dd>
-        <dt>Страниц</dt><dd>480</dd>
-    </dl>
-   </section>
-   <section class="book-section" aria-labelledby="desc-heading">
-    <h2 id="desc-heading">Описания</h2>
-    <p>Роман о визите дьявола в Москву 1930-х годов</p>
-   </section>
-   </article>
-   <section class="reviews-section"  aria-labelledby="reviews-heading">
-    <h2 id="reviews-heading">Отзывы</h2>
-
-    <article class="review">
-        <h3>Отзывы от Анны</h3>
-        <p><time datetime="2026-09-01">1 сентября 2026</time></p>
-        <p>Великолепная книга.</p>
-    </article>
-    <form action="/reviews" method="post">
-        <h3>Оставить отзыв</h3>
-        <p class="form-field">
-            <label for="reviews-name">Имя</label>
-            <input type="text" id="reviews-name" name="name" required maxlength="50">
-        </p>
-        <p class="form-field">
-            <label for="reviews-email">Email</label>
-            <input type="email" id="reviews-email" name="email" required>
-        </p>
-        <p class="form-field">
-            <label for="reviews-text">Оставить отзыв</label>
-            <textarea id="reviews-text" name="text" required maxlength="1000" rows="5"></textarea>
-        </p>
-        <button type="submit"> Отправить </button>
-    </form>
-   </section>
-   <aside  class="similar-books" aria-labelledby="similar-heading">
-            <h2 id="similar-heading">Похожие книги</h2>
+    <header class="site-header">
+        <a href="index.html">BookNest</a>
+        <nav class="site-nav" aria-label="Основная навигация">
             <ul>
-                <li><a href="book.html">Собачье сердце</a></li>
-                <li><a href="book.html">Белая гвардия</a></li>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="loan.html">Выдача</a></li>
             </ul>
-        </aside>
-  </main>
-  <footer class="site-footer">
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav aria-label="Хлебные крошки">
+            <ol>
+                <li><a href="index.html">Каталог</a></li>
+                <li aria-current="page">Книга</li>
+            </ol>
+        </nav>
+
+        <p data-role="loading" hidden>Загрузка…</p>
+
+        <div data-role="error" hidden>
+            <p data-role="error-text"></p>
+            <p><a href="index.html">← Вернуться в каталог</a></p>
+        </div>
+
+        <article data-role="book" hidden>
+            <h1 data-role="title"></h1>
+            <p>Автор: <span data-role="authors"></span></p>
+            <p>Год: <span data-role="year"></span></p>
+            <p>Описание:</p>
+            <p data-role="description"></p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
         <p>© 2025 BookNest</p>
     </footer>
+
+    <script type="module" src="js/book.js"></script>
 </body>
 </html>
