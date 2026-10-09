@@ -1,0 +1,145 @@
+/*  COMPONENTS — карточки, кнопки, формы */
+
+/* --- Карточка книги --- */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;                 
+    padding: var(--space-4);
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-base),
+                transform var(--transition-base);
+}
+
+.book-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.book-card figure {
+    margin: 0 0 var(--space-3);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+}
+
+.book-card h3 {
+    margin-bottom: var(--space-2);
+}
+
+.book-card .btn {
+    margin-top: auto;
+}
+
+/*  Кнопки */
+.btn {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color var(--transition-fast);
+}
+
+.btn:hover {
+    background-color: var(--color-primary-hover);
+    text-decoration: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/*  Формы */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.form-field label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+
+/* Валидация — нативная */
+.form-field input:invalid,
+.form-field select:invalid,
+.form-field textarea:invalid {
+    border-color: var(--color-error);
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+    outline: none;
+}
+
+/*  Fieldset */
+.fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.fieldset legend {
+    padding-inline: var(--space-2);
+    font-weight: 600;
+}
+
+/*  Фильтры (каталог) */
+.filters {
+    padding: var(--space-4);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.filters form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Похожие книги (aside)  */
+.similar-books {
+    padding: var(--space-4);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+}
+
+/*  Отзывы  */
+.review {
+    padding: var(--space-4);
+    border-left: 4px solid var(--color-primary);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-4);
+}

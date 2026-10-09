@@ -1,0 +1,72 @@
+
+:root {
+    /*  Палитра (светлая тема по умолчанию) */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f5f5f5;
+    --color-text: #1a1a1a;
+    --color-text-muted: #666666;
+    --color-primary: #2b6cb0;
+    --color-primary-hover: #1e4f80;
+    --color-border: #dddddd;
+    --color-focus: #ff9900;
+    --color-error: #c53030;
+    --color-success: #2f855a;
+
+    /*  Шкала отступов (кратная 4px)  */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+
+    /*  Радиусы  */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /*  Типографика  */
+    --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --line-height-base: 1.5;
+    --line-height-tight: 1.2;
+
+    /*  Тени  */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    /*  Раскладка  */
+    --container-max: 1280px;
+    --card-min-width: 240px;
+
+    /* Переходы  */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+}
+/*  ТЁМНАЯ ТЕМА — переопределяем ТОЛЬКО токены */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #1a1a1a;
+        --color-bg-alt: #242424;
+        --color-text: #f0f0f0;
+        --color-text-muted: #a0a0a0;
+        --color-primary: #63b3ed;
+        --color-primary-hover: #90cdf4;
+        --color-border: #3a3a3a;
+        --color-focus: #f6ad55;
+        --color-error: #fc8181;
+        --color-success: #68d391;
+
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+}
