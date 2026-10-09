@@ -27,38 +27,38 @@
         <h1>Каталог книг</h1>
 
         <section class="filters" aria-labelledby="filters-heading">
-            <h2 id="filters-heading">Фильтры</h2>
-            <form id="filters-form" action="#" method="get">
-                <p class="form-field">
-                    <label for="search">Поиск</label>
-                    <input type="search" id="search" name="q" maxlength="100">
-                </p>
-                <p class="form-field">
-                    <label for="genre">Жанр</label>
-                    <select id="genre" name="genre"></select>
-                </p>
-                <p class="form-field">
-                    <label for="sort">Сортировка</label>
-                    <select id="sort" name="sort">
-                        <option value="title">По названию (А–Я)</option>
-                        <option value="year">По году (новые)</option>
-                        <option value="rating">По рейтингу</option>
-                    </select>
-                </p>
-                <p class="form-field">
-                    <input type="checkbox" id="available" name="available">
-                    <label for="available">Только доступные</label>
-                </p>
-                <button type="button" id="reset-btn" class="btn">Сбросить фильтры</button>
-            </form>
+            <h2 id="filters-heading">Поиск</h2>
+            <p class="form-field">
+                <label for="search">Название или автор</label>
+                <input type="search" id="search" name="q"
+                       placeholder="Введите минимум 2 символа" maxlength="100">
+            </p>
         </section>
 
         <section aria-labelledby="results-heading">
             <h2 id="results-heading">
-                <span data-role="count">Найдено: 0</span>
+                <span data-role="count"></span>
             </h2>
-            <p data-role="empty" hidden>Ничего не найдено. Попробуйте изменить фильтры.</p>
-            <div data-role="catalog" class="catalog-grid"></div>
+
+            <!-- Состояние: загрузка -->
+            <p data-role="loading" hidden>Загрузка…</p>
+
+            <!-- Состояние: пусто -->
+            <p data-role="empty" hidden>Ничего не найдено. Попробуйте изменить запрос.</p>
+
+            <!-- Состояние: ошибка -->
+            <div data-role="error" hidden>
+                <p data-role="error-text"></p>
+                <button type="button" data-role="retry" class="btn">Повторить</button>
+            </div>
+
+            <!-- Состояние: успех -->
+            <div data-role="catalog" class="catalog-grid" hidden></div>
+
+            <nav class="pagination" aria-label="Пагинация">
+                <button type="button" data-role="prev" class="btn" disabled>← Назад</button>
+                <button type="button" data-role="next" class="btn" disabled>Вперёд →</button>
+            </nav>
         </section>
 
         <section id="wishlist" aria-labelledby="wishlist-heading">
