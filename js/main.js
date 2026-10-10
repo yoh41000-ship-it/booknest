@@ -135,7 +135,7 @@ const debouncedSearch = debounce(() => {
 function setupEventListeners() {
     elements.searchInput.addEventListener('input', (e) => {
         state.query = e.target.value.trim();
-        if (state.query.length < 2) {
+        if (state.query.length < 3) {
             state.uiState = { name: 'empty', message: '' };
             render();
             return;

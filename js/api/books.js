@@ -16,7 +16,6 @@ export async function searchBooks(query, page = 1, signal) {
         q: query,
         page,
         limit: PAGE_SIZE,
-        fields: 'key,title,author_name,first_publish_year,cover_i,ratings_average',
     }, signal);
 
     return {
