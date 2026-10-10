@@ -1,0 +1,30 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "BookNest",
+    "collectionId": "d63329b2-3fc7-43bb-92fb-8aaf99f5920c",
+    "dateExported": "2026-10-10T07:49:25.368Z",
+    "version": "1.4",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c7fbcf4f-8d8d-4eb6-89c4-f2bd3d409fff",
+            "colId": "d63329b2-3fc7-43bb-92fb-8aaf99f5920c",
+            "containerId": "",
+            "name": "https://openlibrary.org/search.json?q=harry+potter",
+            "url": "https://openlibrary.org/search.json?q=harry+potter",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2026-10-10T07:46:40.030Z",
+            "modified": "2026-10-10T07:46:40.030Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "q",
+                    "value": "harry+potter",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "uc26OI9DMIIxu0D7GevnRqN7qs40hsUPz6yjEF1HyMFSZ02tByUM7Kj6ZYfKtM0H3ZMfbUijyeg2tld36sMOmw"
+}
