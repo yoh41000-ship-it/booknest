@@ -1,0 +1,23 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "BookNest3",
+    "collectionId": "7c2fe4f6-e042-450a-a225-9b93a76da5cf",
+    "dateExported": "2026-10-10T07:52:19.476Z",
+    "version": "1.4",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0f0d4f4a-a7a5-4317-950f-9ad2c015c4ea",
+            "colId": "7c2fe4f6-e042-450a-a225-9b93a76da5cf",
+            "containerId": "",
+            "name": "https://openlibrary.org/works/OL82563W.json",
+            "url": "https://openlibrary.org/works/OL82563W.json",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2026-10-10T07:52:14.446Z",
+            "modified": "2026-10-10T07:52:14.446Z",
+            "headers": []
+        }
+    ],
+    "ref": "8HP8-IHbrVNsZHDqKX93AxQdN8vJSCWRk9FA0ILyYNTgXw20u1-kUvRiJ0k1nsGPVry6a0WKiHOXFycoj23FIA"
+}

@@ -1,0 +1,30 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "BookNest2",
+    "collectionId": "8fe09db7-b132-47f7-9a58-7d16ac2a3bdb",
+    "dateExported": "2026-10-10T07:51:31.499Z",
+    "version": "1.4",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "566d9a90-b56d-46ae-b996-2ea3a0ae56b5",
+            "colId": "8fe09db7-b132-47f7-9a58-7d16ac2a3bdb",
+            "containerId": "",
+            "name": "https://openlibrary.org/search.json?q=lord+of+the+rings",
+            "url": "https://openlibrary.org/search.json?q=lord+of+the+rings",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2026-10-10T07:51:27.463Z",
+            "modified": "2026-10-10T07:51:27.463Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "q",
+                    "value": "lord+of+the+rings",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "WbruwLGfR-icvL7KV9S6GfV0ZYhsNX06kAolWDdXWFR-Z5Tr9BwLtawVJ1T5HAAjFY9Cxe31LrwQBcmP4NovpA"
+}

@@ -1,0 +1,88 @@
+/* LAYOUT — каркас страницы */
+
+/* Header на flex, с переносом */
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background-color: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Навигация — тоже flex */
+.site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+/* Основной контейнер */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+}
+
+/* Main — прижимает footer вниз при коротком контенте */
+main {
+    flex: 1;
+    padding-block: var(--space-5);
+}
+
+/* Footer */
+.site-footer {
+    padding: var(--space-4);
+    background-color: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+/*СЕТКА КАТАЛОГА — Grid через auto-fit + minmax
+   Работает БЕЗ media queries */
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+    gap: var(--space-5);
+}
+
+/* Layout для страницы книги — mobile-first
+   На телефоне: всё в столбик*/
+
+.book-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+}
+
+/* Media queries — НЕ БОЛЕЕ ТРЁХ на проект! */
+
+/* 1. Планшет и шире */
+@media (min-width: 768px) {
+    .book-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .form-fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+}
+
+/* 2. Десктоп */
+@media (min-width: 1440px) {
+    .catalog-layout {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: var(--space-6);
+    }
+
+    .book-layout {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
